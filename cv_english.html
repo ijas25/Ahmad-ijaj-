@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Ijaj - Professional CV & Portfolio | Warehouse & Cutting Tool Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono-custom { font-family: 'JetBrains Mono', monospace; }
+        .industrial-grid {
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 industrial-grid antialiased selection:bg-amber-500 selection:text-slate-950" x-data="{ mobileMenu: false, activeTab: 'zoller' }">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-bold shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-warehouse text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block">AHMAD IJAJ</span>
+                    <span class="text-xs text-amber-400 font-mono-custom">WAREHOUSE & TOOLING SPECIALIST</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-amber-400 transition">About</a>
+                <a href="#tools" class="hover:text-amber-400 transition">Cutting Tools & Presetter</a>
+                <a href="#experience" class="hover:text-amber-400 transition">Experience</a>
+                <a href="#skills" class="hover:text-amber-400 transition">Skills</a>
+                <a href="#contact" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold rounded-lg transition shadow-lg shadow-amber-500/20">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenu" @click.away="mobileMenu = false" class="md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" @click="mobileMenu = false" class="block text-slate-300 hover:text-amber-400 py-1">About</a>
+            <a href="#tools" @click="mobileMenu = false" class="block text-slate-300 hover:text-amber-400 py-1">Cutting Tools & Presetter</a>
+            <a href="#experience" @click="mobileMenu = false" class="block text-slate-300 hover:text-amber-400 py-1">Experience</a>
+            <a href="#skills" @click="mobileMenu = false" class="block text-slate-300 hover:text-amber-400 py-1">Skills</a>
+            <a href="#contact" @click="mobileMenu = false" class="block text-center w-full px-4 py-2 bg-amber-500 text-slate-950 font-semibold rounded-lg">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-28 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-custom">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span>Warehouse Staff & Cutting Tool Specialist at PT. Ehwa Trade</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                        Precision Warehouse Management, <br>Securing <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Automotive Production Stability</span>
+                    </h1>
+                    <p class="text-lg text-slate-400 max-w-xl">
+                        Specialist in precision component warehousing and cutting tools at <span class="text-slate-200 font-semibold">PT. Ehwa Trade (Affiliate of PT. Hyundai Manufacturing Indonesia)</span>. Highly experienced in advanced inventory control, SAP/ERP systems, and operating advanced presetter machines: <span class="text-slate-200 font-semibold">Zoller Venturion 600</span> & <span class="text-slate-200 font-semibold">Mapal Uniset</span>.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition shadow-xl shadow-amber-500/20 flex items-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Collaborate / Hire Me</span>
+                        </a>
+                        <a href="#tools" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold rounded-xl transition flex items-center space-x-2">
+                            <i class="fa-solid fa-gears text-amber-400"></i>
+                            <span>View Tooling Expertise</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Warehouse & WMS Stats Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl relative">
+                        <div class="absolute -top-3 right-6 bg-amber-500 text-slate-950 text-xs font-mono-custom font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            PT. Ehwa Trade / Hyundai Affil.
+                        </div>
+                        <div class="flex items-center space-x-4 mb-6 pb-4 border-b border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl font-bold">
+                                <i class="fa-solid fa-warehouse"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-200">Ahmad Ijaj</h3>
+                                <p class="text-xs text-slate-400 font-mono-custom">Warehouse & Tooling Specialist</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 font-mono-custom text-sm">
+                            <div class="flex justify-between items-center bg-slate-950/60 p-3 rounded-lg border border-slate-800/80">
+                                <span class="text-slate-400">Stock Opname Accuracy:</span>
+                                <span class="text-emerald-400 font-bold flex items-center space-x-1">
+                                    <i class="fa-solid fa-circle-check text-xs"></i>
+                                    <span>99.8% - 99.9%</span>
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center bg-slate-950/60 p-3 rounded-lg border border-slate-800/80">
+                                <span class="text-slate-400">Inventory Method:</span>
+                                <span class="text-amber-400 font-bold">FIFO & Bin Location</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-slate-950/60 p-3 rounded-lg border border-slate-800/80">
+                                <span class="text-slate-400">System Operation:</span>
+                                <span class="text-slate-200 font-bold">SAP / ERP / Barcode</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                            <span class="text-xs text-slate-500 font-mono-custom"><i class="fa-solid fa-shield-halved text-amber-400 mr-1"></i> Warehouse 5S & Safety Standards Maintained</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cutting Tool & Presetter Machine Expertise Section -->
+    <section id="tools" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Core Competency: <span class="text-amber-400">Warehouse & Tooling Management</span></h2>
+                <p class="text-slate-400 text-sm">Managing inventory circulation and operating optical presetter measuring machines to ensure seamless manufacturing operations.</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button @click="activeTab = 'zoller'" :class="activeTab === 'zoller' ? 'bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20' : 'bg-slate-900 text-slate-300 hover:bg-slate-800'" class="px-5 py-2.5 rounded-xl text-sm transition border border-slate-700/60">
+                    <i class="fa-solid fa-crosshairs mr-2"></i> Zoller Venturion 600
+                </button>
+                <button @click="activeTab = 'mapal'" :class="activeTab === 'mapal' ? 'bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20' : 'bg-slate-900 text-slate-300 hover:bg-slate-800'" class="px-5 py-2.5 rounded-xl text-sm transition border border-slate-700/60">
+                    <i class="fa-solid fa-microscope mr-2"></i> Mapal Uniset
+                </button>
+                <button @click="activeTab = 'inserts'" :class="activeTab === 'inserts' ? 'bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20' : 'bg-slate-900 text-slate-300 hover:bg-slate-800'" class="px-5 py-2.5 rounded-xl text-sm transition border border-slate-700/60">
+                    <i class="fa-solid fa-diamond mr-2"></i> Carbide Inserts & Tooling
+                </button>
+                <button @click="activeTab = 'system'" :class="activeTab === 'system' ? 'bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20' : 'bg-slate-900 text-slate-300 hover:bg-slate-800'" class="px-5 py-2.5 rounded-xl text-sm transition border border-slate-700/60">
+                    <i class="fa-solid fa-server mr-2"></i> ERP & SAP System
+                </button>
+            </div>
+
+            <!-- Tab Content Display -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-xl">
+                <!-- Tab 1: Zoller Venturion 600 -->
+                <div x-show="activeTab === 'zoller'" class="space-y-4">
+                    <div class="flex items-center space-x-3 text-amber-400 font-mono-custom text-sm">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>PRESETTER MACHINE: ZOLLER VENTURION 600</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100">High-Precision Tool Presetting & Inspection</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Proficient in operating the <span class="text-slate-100 font-semibold">Zoller Venturion 600</span> for automated optical measurement of complex cutting tool geometries. Experienced in X and Z axis alignment, tool holder calibration, cutting edge wear inspection, and direct offset data transfer to CNC machine controls via network to minimize setup time.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono-custom">
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Optical Image Processing</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Automatic Edge Recognition</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ CNC Data Transfer</div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Mapal Uniset -->
+                <div x-show="activeTab === 'mapal'" style="display: none;" class="space-y-4">
+                    <div class="flex items-center space-x-3 text-amber-400 font-mono-custom text-sm">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>PRESETTER MACHINE: MAPAL UNISET</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100">Tool Presetting & Measuring Machine Operation</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Experienced in operating the <span class="text-slate-100 font-semibold">Mapal Uniset</span> for inspection, precision measurement, and setup of various cutting tools, including high-precision fine boring tools. Ensuring accurate tool length and diameter according to production setup sheets to prevent collisions on CNC machines.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono-custom">
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Length & Radius Check</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Fine Boring Tool Setting</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Collision Prevention</div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Inserts -->
+                <div x-show="activeTab === 'inserts'" style="display: none;" class="space-y-4">
+                    <div class="flex items-center space-x-3 text-amber-400 font-mono-custom text-sm">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>CATEGORY: CNC CUTTING INSERTS & HOLDERS</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100">Stock Management & Cutting Tool Selection</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Managing various types of Carbide Inserts, Endmills, and Tool Holders under strict ISO coding specifications. Experienced in tool life tracking, material classification, and maintaining optimal stock availability in automotive manufacturing plants to prevent machine downtime.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono-custom">
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ ISO Coding Standard</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Tool Life Monitoring</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Min-Max Stock Control</div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: System -->
+                <div x-show="activeTab === 'system'" style="display: none;" class="space-y-4">
+                    <div class="flex items-center space-x-3 text-amber-400 font-mono-custom text-sm">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>CATEGORY: WAREHOUSE & ERP SYSTEM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100">Warehouse Administration & Computerized Systems</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Accustomed to operating warehouse management software and ERP systems (such as SAP) for receiving, issuing, and periodic stock opname processes with high accuracy.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono-custom">
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ SAP / ERP System</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Barcode & Data Management</div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300">✓ Stock Opname Audit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Professional Experience</h2>
+                <p class="text-slate-400 text-sm">Track record specialized in warehouse management, automotive manufacturing, and production operations.</p>
+            </div>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 sm:ml-8 space-y-12">
+                <!-- Timeline Item 1: Warehouse & Tooling Specialist at PT. Ehwa Trade -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-950 group-hover:scale-125 transition"></div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Warehouse Staff & Tooling Specialist</h3>
+                                <p class="text-amber-400 text-sm font-medium">PT. Ehwa Trade (Affiliate of PT. Hyundai Manufacturing Indonesia)</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-950 border border-slate-800 text-xs text-slate-300 font-mono-custom rounded-full">2022 - Present</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Fully responsible for warehouse management operations and real-time material inward/outward circulation (receiving & issuing).</li>
+                            <li>Operated <span class="text-slate-100 font-semibold">Zoller Venturion 600</span> and <span class="text-slate-100 font-semibold">Mapal Uniset</span> machines for high-precision measurement, calibration, and inspection of CNC cutting tools prior to production deployment.</li>
+                            <li>Conducted regular physical stock audits (stock opname) achieving high accuracy rates of up to 99.8% to prevent inventory variance.</li>
+                            <li>Implemented structured inventory storage systems based on FIFO (First In, First Out) principles and bin location numbering.</li>
+                            <li>Performed incoming physical quality inspections to verify item specifications prior to ERP/SAP system entry.</li>
+                            <li>Maintained strict adherence to 5S warehouse standards (Seiri, Seiton, Seiso, Seiketsu, Shitsuke) and occupational safety (K3) protocols.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: Staff Engineer  -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-slate-950 group-hover:bg-amber-500 transition"></div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Staff Engineer </h3>
+                                <p class="text-amber-400 text-sm font-medium">PT. Ehwa Trade (Affiliate of PT. Hyundai Manufacturing Indonesia)</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-950 border border-slate-800 text-xs text-slate-300 font-mono-custom rounded-full">2020 - 2022</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Supported the engineering team in analyzing production machine performance and optimizing metal cutting parameters.</li>
+                            <li>Utilized tool presetter machines (Zoller & Mapal Uniset) to evaluate cutting tool life cycles and provided technical recommendations to mitigate premature wear.</li>
+                            <li>Collaborated with production departments for CNC machine troubleshooting and component quality assurance.</li>
+                            <li>Assisted in the creation of technical documentation, standard operating procedures (SOP), and manufacturing process improvements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: PIC Line at PT. Brilaint Jaya Inti -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950 group-hover:bg-amber-500 transition"></div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">PIC Line</h3>
+                                <p class="text-amber-400 text-sm font-medium">PT. Brilaint Jaya Inti</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-950 border border-slate-800 text-xs text-slate-300 font-mono-custom rounded-full">2017 - 2019</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Held full responsibility for operational oversight and daily production workflow continuity on the assembly line.</li>
+                            <li>Coordinated production line operators to achieve targeted output goals while upholding strict quality standards.</li>
+                            <li>Monitored work efficiency, resolved technical hurdles on the floor, and provided daily reports to management.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Line Leader at PT. Toshiba Consumer Product Indonesia -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-amber-500 transition"></div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Line Leader (Washing Machine Production)</h3>
+                                <p class="text-amber-400 text-sm font-medium">PT. Toshiba Consumer Product Indonesia</p>
+                            </div>
+                            <span class="px-3 py-1 bg-slate-950 border border-slate-800 text-xs text-slate-300 font-mono-custom rounded-full">2012 - 2016</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Led assembly and manufacturing production teams for washing machine units within large-scale electronics manufacturing.</li>
+                            <li>Ensured daily output target achievement while strictly enforcing Quality Control standards.</li>
+                            <li>Supervised team work discipline, safety protocol compliance (K3), and workflow efficiency along the assembly line.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Skills & Competencies</h2>
+                <p class="text-slate-400 text-sm">Core expertise in warehouse management, production line leadership, and precision measuring equipment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Hard Skills -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-100">Warehousing & Inventory</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Warehouse Management</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Stock Opname Audit</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">SAP / ERP System</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">FIFO & Bin Location</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Receiving & Issuing</span>
+                    </div>
+                </div>
+
+                <!-- Technical Tools & Leadership Skills -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-100">Tooling & Leadership</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Zoller Venturion 600</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Mapal Uniset Op.</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Line Leadership</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">PIC Line Management</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Cutting Tool Knowledge</span>
+                    </div>
+                </div>
+
+                <!-- Safety & Standards -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-100">Standards & Safety</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Warehouse 5S</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Industrial K3 (Safety First)</span>
+                     
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Quality Inspection</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-lg font-mono-custom">Zero-Error Principle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-custom">
+                            <span>OPEN FOR CAREER OPPORTUNITIES</span>
+                        </div>
+                        <h2 class="text-3xl font-bold tracking-tight">Let's Connect</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Are you looking for an experienced Warehouse & Tooling Specialist in the automotive manufacturing sector to strengthen your team? Please feel free to reach out through the contacts below.
+                        </p>
+                        <div class="space-y-4 pt-2 font-mono-custom text-sm">
+                            <a href="mailto:ahmadijaj25@gmail.com" class="flex items-center space-x-3 text-slate-300 hover:text-amber-400 transition">
+                                <div class="w-10 h-10 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-amber-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <span>ahmadijaj25@gmail.com</span>
+                            </a>
+                            <a href="https://wa.me/6281807793527" target="_blank" class="flex items-center space-x-3 text-slate-300 hover:text-amber-400 transition">
+                                <div class="w-10 h-10 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-amber-400">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <span>+62 818-0779-3527</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="flex items-center space-x-3 text-slate-300 hover:text-amber-400 transition">
+                                <div class="w-10 h-10 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-amber-400">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <span>linkedin.com/in/ahmad ijaj</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Simulation -->
+                    <div class="bg-slate-950/80 border border-slate-800 p-6 rounded-2xl space-y-4">
+                        <h3 class="font-bold text-slate-200">Send Direct Message</h3>
+                        <form @submit.prevent="alert('Thank you! Simulated message sent. You can replace this action with an email backend like Formspree.')" class="space-y-4 text-sm">
+                            <div>
+                                <label class="block text-slate-400 text-xs font-mono-custom mb-1">FULL NAME</label>
+                                <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition" placeholder="HR / Recruiter Name">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs font-mono-custom mb-1">EMAIL / COMPANY</label>
+                                <input type="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition" placeholder="company@domain.com">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs font-mono-custom mb-1">MESSAGE</label>
+                                <textarea rows="3" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition" placeholder="Write your offer or message..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition shadow-lg shadow-amber-500/20">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-xs text-slate-500 font-mono-custom">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <p>© 2026 Ahmad Ijaj - Portfolio. Designed for Vercel Deployment.</p>
+            <p class="text-amber-500/80">Built with Industrial Precision & Modern Web Standards.</p>
+        </div>
+    </footer>
+
